@@ -12,3 +12,5 @@ RUN \curl -sSL https://get.rvm.io | bash -s stable
 RUN bash -l -c "rvm requirements"
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+ADD bootstrap.sh /etc/my_init.d/099_bootstrap
